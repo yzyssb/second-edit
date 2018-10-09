@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>chicken</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+
+    <script type="text/javascript">
+    	// 设置根元素font-size
+		(function () {
+			var infinite = function() {
+				var htmlElem = document.getElementsByTagName("html")[0];
+
+				// 获取页面宽度
+				var htmlWidth = htmlElem.clientWidth;
+
+				// 计算font-size大小
+				var fontSize = (100 / 375 * htmlWidth).toFixed(2);
+
+				// 设置html的font-size属性
+				htmlElem.style.fontSize = fontSize + "px";
+			};
+			infinite();
+
+			// resize事件,监控浏览器页面的宽度是否发生改变
+			window.onresize = function () {
+				infinite();
+			};
+		}());
+
+    </script>
+
+  </body>
+</html>
