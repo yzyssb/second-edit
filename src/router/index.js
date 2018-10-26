@@ -51,6 +51,14 @@ export default new Router({
       meta:{
         keepAlive:true,
       },
+    },
+    {
+      path:'/new',
+      name:'NewPage',
+      component:resolve=>require(['../components/NewPage'],resolve),
+      meta:{
+        keepAlive:true
+      }
     }
   ]
 })

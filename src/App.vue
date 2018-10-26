@@ -1,6 +1,7 @@
 <template>
   <div id="app" @click="changeData">
     <div class="routers">
+      <router-link to="/new">new</router-link>
       <router-link to="/">test</router-link>
       <router-link to="/hello">hello</router-link>
     </div>
@@ -56,9 +57,11 @@ export default {
 .routers{
   display:flex;
   justify-content:space-around;
-  padding:10px 0;
+  //padding:10px 0;
   background:rgba(0,0,0,0.5);
   font-size:0.2rem;
+  height:0.5rem;
+  line-height:0.5rem;
 }
 a{
   color:#fff;
