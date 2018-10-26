@@ -5,10 +5,10 @@
     </ul>
 
     <ul class="right-nav" ref="rightNav">
-      <li v-if="rightList.length>0" v-for="(item,index) in rightList":key="index">
+      <li v-if="rightList.length>0" v-for="(item,index) in rightList" :key="index">
         <h5>{{item.cateName}}</h5>
         <ul class="sub-nav">
-          <li v-if="item.children.length>0" v-for="(subItem,idx) in item.children" :key="idx">
+          <li v-if="item.children&&item.children.length>0" v-for="(subItem,idx) in item.children" :key="idx">
             <dd>
               <dl><img :src="subItem.src" class="img" /></dl>
               <dl>{{subItem.name}}</dl>
@@ -95,6 +95,7 @@ export default{
       var leftUl = this.$refs.leftNav;
       // 左目录的所有li
       var leftLI = leftUl.getElementsByTagName('li');
+      console.log(leftLI[0].classList)
       // 右商品列表
       var rightUl = this.$refs.rightNav;
       var ti = rightUl.querySelectorAll('h5');
@@ -139,7 +140,6 @@ export default{
       var scrollMove = (ele, target) => {
         // 根据当前scrollTop与目标点距离算出单次改变量
         var vector = Math.round((target - ele.scrollTop) / 10);
-        console.log('vector', vector);
         var scrollTimer = setInterval(() => {
           ele.scrollTop += vector;
           // 超出目标点后 或者 已经滚动到底清空定时器
@@ -155,7 +155,6 @@ export default{
       // 右列表应该滚动到的标题的offsetTop
       console.log( rightUl_.querySelectorAll('h5') )
       var rightTo_ = rightUl_.querySelectorAll('h5')[index].offsetTop-50*window.innerWidth/375;
-      console.log(rightTo_)
       scrollMove(rightUl_, rightTo_);
     },
   }
@@ -216,6 +215,10 @@ ul{
       height:100%;
       background:#3190e8;
     }
+  }
+  .active{
+    font-size:0.2rem;
+    color:red;
   }
 }
 </style>
