@@ -68,6 +68,7 @@ export default{
       ]
     }
   },
+  
   mounted(){
     var time = Math.floor(Math.random() * 2000);
     console.log('模拟加载用时' + time);
