@@ -1,11 +1,11 @@
 <template>
   <div id="app" @click="changeData">
-    <!-- <div class="routers">
+    <div class="routers">
       <router-link to="/new">new</router-link>
       <router-link to="/">test</router-link>
       <router-link to="/hello">hello</router-link>
       <router-link to="/1111">1111</router-link>
-    </div> -->
+    </div>
     <keep-alive>
       <router-view v-if="$route.meta.keepAlive"></router-view>
     </keep-alive>
