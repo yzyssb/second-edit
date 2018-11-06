@@ -30,8 +30,81 @@ export default{
         {name:'鲜花类'},
         {name:'水果类'},
         {name:'肉食类'},
+        {name:'鲜花类'},
+        {name:'水果类'},
+        {name:'肉食类'},
+        {name:'鲜花类'},
+        {name:'水果类'},
+        {name:'肉食类'},
       ],
+      isLoaded:true,
       rightList:[
+        {
+          cateName:'鲜花类',
+          children:[
+            {name:'玫瑰花',price:100,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962938966848.jpg'},
+            {name:'水仙花',price:30,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962960638703.jpg'},
+            {name:'月季花',price:40,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962960782004.jpg'},
+            {name:'牵牛花',price:20,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962960336753.jpg'},
+            {name:'向日葵',price:10,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962960175674.jpg'},
+            {name:'蓝色妖姬',price:200,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962960931593.jpg'},
+          ]
+        },
+        {
+          cateName:'水果类',
+          children:[
+            {name:'避孕黄瓜',price:100,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962938966848.jpg'},
+            {name:'释迦',price:30,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962960638703.jpg'},
+            {name:'莲雾',price:40,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962960782004.jpg'},
+            {name:'红毛丹',price:20,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962960336753.jpg'},
+            {name:'鳄梨',price:10,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962960175674.jpg'},
+            {name:'荸荠',price:200,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962960931593.jpg'},
+          ]
+        },
+        {
+          cateName:'肉食类',
+          children:[
+            {name:'象拔',price:100,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962938966848.jpg'},
+            {name:'五花肉',price:30,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962960638703.jpg'},
+            {name:'炖猪脚',price:40,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962960782004.jpg'},
+            {name:'红烧肉',price:20,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962960336753.jpg'},
+            {name:'白肉',price:10,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962960175674.jpg'},
+            {name:'手撕猪肉',price:200,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962960931593.jpg'},
+          ]
+        },
+        {
+          cateName:'鲜花类',
+          children:[
+            {name:'玫瑰花',price:100,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962938966848.jpg'},
+            {name:'水仙花',price:30,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962960638703.jpg'},
+            {name:'月季花',price:40,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962960782004.jpg'},
+            {name:'牵牛花',price:20,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962960336753.jpg'},
+            {name:'向日葵',price:10,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962960175674.jpg'},
+            {name:'蓝色妖姬',price:200,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962960931593.jpg'},
+          ]
+        },
+        {
+          cateName:'水果类',
+          children:[
+            {name:'避孕黄瓜',price:100,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962938966848.jpg'},
+            {name:'释迦',price:30,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962960638703.jpg'},
+            {name:'莲雾',price:40,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962960782004.jpg'},
+            {name:'红毛丹',price:20,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962960336753.jpg'},
+            {name:'鳄梨',price:10,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962960175674.jpg'},
+            {name:'荸荠',price:200,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962960931593.jpg'},
+          ]
+        },
+        {
+          cateName:'肉食类',
+          children:[
+            {name:'象拔',price:100,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962938966848.jpg'},
+            {name:'五花肉',price:30,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962960638703.jpg'},
+            {name:'炖猪脚',price:40,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962960782004.jpg'},
+            {name:'红烧肉',price:20,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962960336753.jpg'},
+            {name:'白肉',price:10,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962960175674.jpg'},
+            {name:'手撕猪肉',price:200,src:'http://www.xiaoniren.com.cn/upload/news/image/201706/14962960931593.jpg'},
+          ]
+        },
         {
           cateName:'鲜花类',
           children:[
@@ -140,14 +213,14 @@ export default{
       var scrollMove = (ele, target) => {
         // 根据当前scrollTop与目标点距离算出单次改变量
         var vector = Math.round((target - ele.scrollTop) / 10);
-        var scrollTimer = setInterval(() => {
+        this.scrollTimer = setInterval(() => {
           ele.scrollTop += vector;
           // 超出目标点后 或者 已经滚动到底清空定时器
           // 上滑(scrollTop>=目标点 且 vector为正) 或 下滑(scrollTop <= 目标点 且 vector为负)或 滑到最底
           if (((ele.scrollTop >= target) && vector > 0) || ((ele.scrollTop <= target) && vector < 0) || ((ele.scrollTop + ele.clientHeight + 1) >= ele.scrollHeight)) {
             // +1 正确激活当前左栏状态
             ele.scrollTop = target + 1;
-            clearInterval(scrollTimer);
+            clearInterval(this.scrollTimer);
           }
         }, 1000 / 100);
       };

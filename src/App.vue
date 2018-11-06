@@ -1,10 +1,11 @@
 <template>
   <div id="app" @click="changeData">
-    <div class="routers">
+    <!-- <div class="routers">
       <router-link to="/new">new</router-link>
       <router-link to="/">test</router-link>
       <router-link to="/hello">hello</router-link>
-    </div>
+      <router-link to="/1111">1111</router-link>
+    </div> -->
     <keep-alive>
       <router-view v-if="$route.meta.keepAlive"></router-view>
     </keep-alive>
@@ -50,6 +51,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   font-size:0.12rem;
+  -webkit-overflow-scrolling: touch;
 }
 *{
   margin:0;padding:0;
@@ -57,7 +59,7 @@ export default {
 .routers{
   display:flex;
   justify-content:space-around;
-  //padding:10px 0;
+  /* padding:10px 0; */
   background:rgba(0,0,0,0.5);
   font-size:0.2rem;
   height:0.5rem;

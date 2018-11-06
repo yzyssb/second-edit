@@ -59,6 +59,14 @@ export default new Router({
       meta:{
         keepAlive:true
       }
+    },
+    {
+      path:'/1111',
+      name:'testForBetterScroll',
+      component:resolve=>require(['../components/testForBetterScroll'],resolve),
+      meta:{
+        keepAlive:true
+      }
     }
   ]
 })
