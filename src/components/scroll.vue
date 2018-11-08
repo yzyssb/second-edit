@@ -90,7 +90,7 @@
           click: this.click,
           scrollX: this.scrollX
         })
-
+        
         // 是否派发滚动事件
         if (this.listenScroll) {
           let me = this
@@ -102,6 +102,7 @@
         // 是否派发滚动到底部事件，用于上拉加载
         if (this.pullup) {
           this.scroll.on('scrollEnd', () => {
+            console.log(this.scroll.y)
             // 滚动到底部
             if (this.scroll.y <= (this.scroll.maxScrollY + 50)) {
               this.$emit('scrollToEnd')

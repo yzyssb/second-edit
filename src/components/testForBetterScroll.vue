@@ -4,6 +4,8 @@
             :data="data"
             :pulldown="pulldown"
             :pullup="pullup"
+            :listenScroll="listenScroll"
+            @scroll="get"
             @scrollToEnd="loadMore"
             @pulldown="loadData">
       <ul class="content">
@@ -21,7 +23,8 @@ export default {
     return {
       data: [],
       pulldown: true,
-      pullup:true
+      pullup:true,
+      listenScroll:true
     };
   },
   created() {
@@ -43,6 +46,9 @@ export default {
         arr.push('more:'+ss)
       }
       this.data = this.data.concat(arr);
+    },
+    get(pos){
+      console.log(pos)
     }
   },
   components:{
