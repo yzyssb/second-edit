@@ -9,72 +9,72 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    // {
-    //   path:'/',
-    //   name:'home',
-    //   component:resolve=>require(['../pages/HomePage'],resolve),
-    //   meta:{
-    //     keepAlive:true
-    //   }
-    // }
     {
-      path: '/',
-      name: 'test',
-      component: resolve=>require(['../components/test'],resolve),
-      redirect:'/page1',
-      meta:{
-        keepAlive:true,
-      },
-      children:[
-      	{
-      		path:'/page1',
-      		name:'page1',
-      		component:resolve=>require(['../components/page1'],resolve),
-          meta:{
-            keepAlive:true,
-          },
-      	},
-      	{
-      		path:'/page2',
-      		name:'page2',
-      		component:resolve=>require(['../components/page2'],resolve),
-          meta:{
-            keepAlive:true,
-          },
-      	},
-      	{
-      		path:'/page3',
-      		name:'page3',
-      		component:resolve=>require(['../components/page3'],resolve),
-          meta:{
-            keepAlive:true,
-          },
-      	}
-      ]
-    },
-    {
-   	  path:'/hello',
-   	  name:'HelloWorld',
-   	  component:resolve=>require(['../components/HelloWorld'],resolve),
-      meta:{
-        keepAlive:true,
-      },
-    },
-    {
-      path:'/new',
-      name:'NewPage',
-      component:resolve=>require(['../components/NewPage'],resolve),
-      meta:{
-        keepAlive:true
-      }
-    },
-    {
-      path:'/1111',
-      name:'testForBetterScroll',
-      component:resolve=>require(['../components/testForBetterScroll'],resolve),
+      path:'/',
+      name:'home',
+      component:resolve=>require(['../pages/HomePage'],resolve),
       meta:{
         keepAlive:true
       }
     }
+    // {
+    //   path: '/',
+    //   name: 'test',
+    //   component: resolve=>require(['../components/test'],resolve),
+    //   redirect:'/page1',
+    //   meta:{
+    //     keepAlive:true,
+    //   },
+    //   children:[
+    //   	{
+    //   		path:'/page1',
+    //   		name:'page1',
+    //   		component:resolve=>require(['../components/page1'],resolve),
+    //       meta:{
+    //         keepAlive:true,
+    //       },
+    //   	},
+    //   	{
+    //   		path:'/page2',
+    //   		name:'page2',
+    //   		component:resolve=>require(['../components/page2'],resolve),
+    //       meta:{
+    //         keepAlive:true,
+    //       },
+    //   	},
+    //   	{
+    //   		path:'/page3',
+    //   		name:'page3',
+    //   		component:resolve=>require(['../components/page3'],resolve),
+    //       meta:{
+    //         keepAlive:true,
+    //       },
+    //   	}
+    //   ]
+    // },
+    // {
+   	//   path:'/hello',
+   	//   name:'HelloWorld',
+   	//   component:resolve=>require(['../components/HelloWorld'],resolve),
+    //   meta:{
+    //     keepAlive:true,
+    //   },
+    // },
+    // {
+    //   path:'/new',
+    //   name:'NewPage',
+    //   component:resolve=>require(['../components/NewPage'],resolve),
+    //   meta:{
+    //     keepAlive:true
+    //   }
+    // },
+    // {
+    //   path:'/1111',
+    //   name:'testForBetterScroll',
+    //   component:resolve=>require(['../components/testForBetterScroll'],resolve),
+    //   meta:{
+    //     keepAlive:true
+    //   }
+    // }
   ]
 })

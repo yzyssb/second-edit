@@ -1,6 +1,9 @@
 <template>
   <div class="hello">
-    <div id="myChart" :style="{width: '100%', height: '400px'}"></div>
+    <!-- <div id="myChart" :style="{width: '100%', height: '400px'}"></div> -->
+    <ul>
+      <li v-for="(item,index) in arr" :class="'font-'+index">{{item}}</li>
+    </ul>
   </div>
 </template>
 
@@ -9,10 +12,12 @@ import { Toast } from "mint-ui";
 export default {
   name: "home",
   data() {
-    return {};
+    return {
+      arr:['你','是','个','王','八蛋']
+    };
   },
   mounted() {
-    this.drawLine();
+    // this.drawLine();
   },
   methods: {
     drawLine() {
@@ -49,6 +54,14 @@ $red: pink;
     content: "？？？";
   }
 }
+
+@for $i from 1 to 5{
+  .font-#{$i}{
+    font-size:#{$i*10}px;
+  }
+}
+
+
 </style>
 <style lang="less">
 @redColor: red;
