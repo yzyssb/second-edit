@@ -7,6 +7,10 @@ import axios from 'axios'
 import qs from 'qs'
 import Mint from 'mint-ui'
 
+// 引入echarts
+import echarts from 'echarts'
+Vue.prototype.$echarts = echarts 
+
 Vue.use(Mint)
 
 import 'mint-ui/lib/style.css';

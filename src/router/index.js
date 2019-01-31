@@ -9,6 +9,14 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
+    // {
+    //   path:'/',
+    //   name:'home',
+    //   component:resolve=>require(['../pages/HomePage'],resolve),
+    //   meta:{
+    //     keepAlive:true
+    //   }
+    // }
     {
       path: '/',
       name: 'test',
